@@ -4,13 +4,13 @@ const Schema = mongoose.Schema;
 let studentSchema = new Schema(
   {
     name: {
-      type: String
+      type: String,
     },
     email: {
-      type: String
+      type: String,
     },
     rollno: {
-      type: Number
+      type: Number,
     },
   },
   {

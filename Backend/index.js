@@ -1,4 +1,3 @@
-// Importar modulos
 let express = require("express");
 let mongoose = require("mongoose");
 let cors = require("cors");
@@ -7,10 +6,9 @@ let bodyParser = require("body-parser");
 // Ruta de Express
 const studentRoute = require("../backend/routes/student.route");
 
-// Cadena de conexión
+// DB Config
 const db = require("../backend/database/db").mongoURI;
-
-// Conexión con la base de datos mongoDB
+// Connect to MongoDB from mLab
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("MongoDB successfully connected"))
@@ -26,7 +24,7 @@ app.use(
 app.use(cors());
 app.use("/students", studentRoute);
 
-// Configuración del puerto (Port)
+// PORT
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
   console.log("Connected to port " + port);

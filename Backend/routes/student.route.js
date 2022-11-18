@@ -17,7 +17,7 @@ router.route("/create-student").post((req, res, next) => {
   });
 });
 
-// LEER todos los Estudiantes
+// LEER Estudiante
 router.route("/").get((req, res, next) => {
   studentSchema.find((error, data) => {
     if (error) {
