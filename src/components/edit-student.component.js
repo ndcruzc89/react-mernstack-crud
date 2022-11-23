@@ -99,7 +99,7 @@ export default class EditStudent extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="Name">
+          <Form.Group controlId="Codigo">
             <Form.Label>Código</Form.Label>
             <Form.Control
               type="text"
